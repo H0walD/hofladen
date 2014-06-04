@@ -1,0 +1,85 @@
+<div class="col-lg-8">
+	<h1>Kontakt</h1>
+	<hr>
+	
+	<form action="?contact" method="POST" class="form-horizontal">
+		<div class="col-lg-12">
+			<ul class="list-group list-group-default">
+				<li class="list-group-item list-group-item-info">
+					<b>An wen m&ouml;chten Sie Schreiben</b><i class="fa fa-pencil pull-right"></i>
+				</li>
+				{EXPLODE}
+				<li class="list-group-item">
+					<label for="w{KEY}" class="col-lg-12">
+						<input id="w{KEY}" {c} type="radio" name="wer" value="{KEY}" />
+						&nbsp; {VAL}
+					</label>
+					<br style="clear: both;">
+				</li>
+				
+				{EXPLODE}
+				<li class="list-group-item">
+					<!-- Text Name des Users-->
+					<div class="col-lg-12">
+						<label class="control-label">{_lang_name}</label>
+						<input class="form-control" type="text" name="name" value="{name}" placeholder="Name (Pflichtfeld)" >
+					</div>
+					<!-- Email Name des Users-->
+					<div class="col-lg-12">
+						<label class="control-label">{_lang_mail}</label>
+						<input type="text" name="mail" value="{mail}" placeholder="Email Adresse (Pflichtfeld)" class="form-control">
+					</div>
+					<!-- Betreff des Kontakt-->
+					<div class="col-lg-12">
+						<label class="control-label">{_lang_subject}</label>
+						<input type="text" name="subject" value="{subject}" placeholder="Titel (Pflichtfeld)" class="form-control">
+					</div>
+					<!-- Textarea -->
+					<div class="col-lg-12">
+						<label class="control-label">{_lang_message}</label>                   
+						<textarea  name="txt" class="form-control" rows="10">{text}</textarea>
+					</div>
+					
+					<div class="col-lg-12">{ANTISPAM}</div>
+					
+					<div class="col-lg-12">
+						<label class="control-label" for="send"></label>
+						<div class="controls">
+						<input type="submit" value="Absenden" class="form-control btn btn-success">
+						</div>
+					</div>
+					<br style="clear: both;">
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+<div class="col-lg-4">
+	<div class="list-group">
+		<li class="list-group-item">
+			<b class="pull-left">Adresse</b>
+			<i class="fa fa-home pull-right"></i>
+			<br class="clear">
+		</li>
+		<li class="list-group-item">
+			Ernst Nigg<br> 
+			Aeulenhof 1<br>
+			Fl 9496 Balzers
+		</li>
+		<a href="?googlemap" class="list-group-item list-group-item-success text-center" target="_blank" onclick="window.open(this.href,this.target,'width=620,height=620'); return false;"><b><i class="fa fa-search"></i>Google Maps</b></a>
+		<li class="list-group-item">
+			<i class="fa fa-phone"></i>&nbsp; +423 384 24 86
+		</li>
+		<li class="list-group-item">
+			<i class="fa fa-mobile"></i>&nbsp;  +4179 213 12 51
+		</li>
+		<li class="list-group-item">
+			<i class="fa fa-print"></i>&nbsp; +423 384 24 93
+		</li>
+		
+		<a class="list-group-item list-group-item-success text-center" href="mailto:frischesvombauernhof@powersurf.li"><i class="fa fa-envelope"></i>&nbsp; eMail Kontakt<br><span class="small">frischesvombauernhof@powersurf.li</span></a>
+	</div>
+
+</div>
+
+

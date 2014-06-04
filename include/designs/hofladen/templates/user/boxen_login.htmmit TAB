@@ -1,0 +1,51 @@
+<button class="btn btn-success" href="#Registrieren" data-toggle="modal" data-target=".bs-modal-xs" style="margin-top:8px">Login/Registrieren&nbsp;<i class="fa fa-sign-in"></i></button>
+<div class="modal fade bs-modal-xs" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myxsallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    &nbsp;&nbsp;&nbsp;
+        <div class="modal-content">
+            <br>
+            <div class="bs-example bs-example-tabs">
+            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                <li class=""><a href="#Registrieren" data-toggle="tab">Registrieren</a></li>
+                <li class=""><a href="#Warum" data-toggle="tab">warum?</a></li>
+                </ul>
+            </div>
+            <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in" id="Warum">
+                        <p>Warum Registiert man sich bei Uns ?</p><br>
+                        <p>Ganz einfach, nur dann kann man alle vorzuege unserer Homepage verwenden wie zum Beispiel Unser Online Shop</p>
+                    </div>
+                    <div class="tab-pane fade active in" id="Login">
+                        <form class="form-horizontal" method="post">
+                        	<div class="input-group">
+                        		<span class="input-group-btn">
+        							<button class="btn btn-success" type="button" style="height:34px;width:40px"><i class="fa fa-user"></i></button>
+      							</span>
+                           		<input name="name" type="text" class="form-control" placeholder="Benutzername">
+                             </div>
+                             <div class="input-group" style="margin-top:5px">
+                        		<span class="input-group-btn">
+        							<button class="btn btn-success" type="button" style="height:34px;width:40px"><i class="fa fa-key"></i></button>
+      							</span>
+                            <input name="pass" type="password" class="form-control" placeholder="Passwort">
+                            </div></br>
+                            <input type="hidden" name="wdlink" value="{wdlink}"/>
+                            <button name="user_login_sub" type="submit" class="btn btn-success" value="login" >Login&nbsp;<i class="fa fa-sign-in"></i></button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="Registrieren">
+                    <a href="?user-regist"><button  class="btn btn-success" >Kostenlosen Account erstellen&nbsp;<i class="fa fa-thumbs-up fa-spin"></i></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close&nbsp;<i class="fa fa-times"></i></button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<button class="btn btn-success" href="#Registrieren" data-toggle="modal" data-target=".bs-modal-xs" style="margin-top:8px">Login / Registrieren&nbsp;<i class="fa fa-sign-in"></i></button>
+<div class="modal fade bs-modal-xs" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close float-right" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <center>
+                    <h1>Login Box </h1>
+                </center>
+                <hr>
+                        <form class="form-horizontal" method="post">
+                        	<div class="input-group">
+                        		<span class="input-group-btn">
+                                            <button class="btn btn-success" type="button" style="height:34px;width:40px"><i class="fa fa-user"></i></button>
+      					</span>
+                           		<input name="name" type="text" class="form-control" placeholder="Benutzername">
+                             </div>
+                             <div class="input-group" style="margin-top:5px">
+                        		<span class="input-group-btn">
+                                            <button class="btn btn-success" type="button" style="height:34px;width:40px"><i class="fa fa-key"></i></button>
+      					</span>
+                            <input name="pass" type="password" class="form-control" placeholder="Passwort">
+                            </div></br>
+                            <input type="hidden" name="wdlink" value="{wdlink}"/>
+                            <div class="btn-group">
+                                    <button name="user_login_sub" type="submit" class="btn btn-success" value="login">Login&nbsp;<i class="fa fa-sign-in"></i></button>
+                                  <a href="?user-regist" class="btn btn-info" data-toggle="tooltip" data-placement="top"  title="Kostenlosen Account erstellen">Registrieren&nbsp;<i class="fa fa-user"></i></a>
+                                    <a href="?user-remind" class="btn btn-default" data-toggle="tooltip" data-placement="top"  title="neues Passwort zusenden">Passwort vergessen&nbsp;<i class="fa fa-key"></i></a>
+                            </div>
+                        </form>
+            </div>
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close&nbsp;<i class="fa fa-times"></i></button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>

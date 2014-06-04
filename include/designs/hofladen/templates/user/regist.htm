@@ -1,0 +1,46 @@
+<!-- REGELN -->
+<form action="index.php?user-regist-2" method="POST">
+
+    {_lang_attentionplease}:
+    <br />
+    {regeln}
+
+
+    <br /><br /><input type="submit" value="{_lang_readandok}" name="Yes" class="btn btn-default">
+
+</form>
+{EXPLODE}
+{FEHLER}
+<form action="index.php?user-regist-2" method="POST">
+    <input type="hidden" value="Gelesen und einverstanden" name="checked" >
+    <table class="table table-bordered">
+        <tr class="success">
+            <th colspan="2"><b>{_lang_REGISTER}</b></th>
+        </tr><tr>
+            <td colspan="2" class="success">{FEHLER}</td>
+        </tr><tr>
+            <td class="active" width="60">{_lang_nickname}</td>
+            <td ><input type="text" name="nutz" value="{name}" maxlength="15" class="form-control"></td>
+        </tr><tr>
+            <td class="active">{_lang_mail}</td>
+            <td ><input type="text" maxlength="100" value="{email}" name="email" class="form-control"></td>
+        </tr>{EXPLODE}<tr>
+            <td class="active">{_lang_password}</td>
+            <td><input type="password" name="pass" class="form-control"></td>
+        </tr>{EXPLODE}
+        <tr>
+            <td class="active">Antispam</td>
+            <td>{antispam}</td>
+        </tr>
+        <tr class="success">
+            <td></td>
+            <td><input type="submit" name="register" value="{_lang_register}" class="btn btn-success"></td>
+        </tr>
+    </table>
+</form>
+{EXPLODE}
+{_lang_hello} {NAME}<br>
+
+{_lang_yourregistrationwassuccessful}!<br><br>
+{_lang_amailhasbeensenttoyouwithmailandpass}!<br><br>
+{_lang_afteryoureceivedthemail} <a href="index.php?user-2">{_lang_login2}</a>

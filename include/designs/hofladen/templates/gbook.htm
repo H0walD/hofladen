@@ -1,0 +1,187 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+            <div class="col-lg-8 col-md-8 col-xs-12 pull-left">
+                <a class="btn btn-success col-lg-8 col-md-8 col-xs-12" href="index.php?gbook-1"><b>Ins Gästebuch schreiben.&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil"></i></b></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12 pull-rigth">
+                    <button class="btn btn-info col-lg-12 col-md-12 col-xs-12"><b class="pull-left"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;&nbsp;{_lang_entries}</b> <b class="badge pull-right">{EINTRAGE}</b></button>
+                    <br style="clear:both;"> 
+            </div>
+        <br style="clear:both;">
+    </div>     
+</div>
+<br style="clear:both;">
+{EXPLODE}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+	<div class="col-lg-6 col-md-6 col-xs-6 pull-left"><b>{NAME}</b></div>
+        <div class="col-lg-3 col-md-3 col-xs-3">{MAIL}{PAGE}</div>
+        <div class="col-lg-3 col-md-3 col-xs-3 pull-right">geschrieben am:  {DATE}</div>
+        <br style="clear:both;">
+    </div>
+	<div class="panel-body">
+		  <div class="col-lg-12 col-md-12 col-xs-12">{TEXT}</div>
+	</div>
+</div>
+{koms}
+<br style="clear:both;">
+<br style="clear:both;">
+{EXPLODE}
+
+
+<br />
+<br />
+
+<div align="center">{SITELINK}</div>
+
+{EXPLODE}
+
+<!-- G &auml; S T E B U C H   E N T E R   F O R M U L A R -->
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+  
+	var ErlaubteAnzahl={TXTL};
+	
+	
+	function checkg ( ) {
+	  if ( document.form.txt.value.length > ErlaubteAnzahl ) {
+		  alert('Du hast mehr als ' + ErlaubteAnzahl + ' Zeichen verwendet');
+			return false;
+		} else {
+		  var fehler = '';
+			if ( document.form.txt.value.length == 0 ) {
+			  fehler += 'Bitte einen Text eingeben';
+			}
+			if ( document.form.name.value.length == 0 ) {
+			  if ( fehler != '' ) {
+				  fehler += "\n";
+				}
+				fehler += 'Bitte einen Namen eingeben';
+			}
+			if ( fehler != '' ) {
+			  alert ( fehler );
+				return false;
+			} else {
+			  return true;
+			}
+		}
+	}
+
+function RestlicheZeichenErmitteln(d)
+{
+	Laenge=document.form.txt.value.length;
+	if(Laenge>ErlaubteAnzahl)
+	{
+		document.form.txt.value=document.form.txt.value.substring(0,ErlaubteAnzahl);
+		RestlicheZeichen=0;
+	}
+	else
+	{
+		RestlicheZeichen=ErlaubteAnzahl-Laenge;
+	}
+	document.form.Laenge.value=RestlicheZeichen;
+}
+
+//-->
+</script>
+
+<script type="text/javascript" src="include/includes/js/bbcode.js"></script>
+<form action="index.php?gbook-2" onsubmit="return checkg()" method="POST" name="form">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <b>{_lang_insert}</b>
+            <br style="clear:both;">
+        </div>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td class="active"><b>{_lang_name}</b></td>
+                <td class="success"><input class="form-control" type="text" value="{uname}" tabindex="1" name="name"></td>
+            </tr>
+            <tr>
+                <td class="active"><b>{_lang_mail}</b> *</td>
+                <td class="success"><input class="form-control" type="text" name="mail" tabindex="2"></td>
+            </tr>
+            <tr>
+                <td class="active"><b>{_lang_homepage}</b> *</td>
+                <td class="success"><input class="form-control" type="text" name="page" tabindex="3"></td>
+            </tr>
+            <tr>
+                <td class="active" valign="top"><b>{_lang_message}</b><br><br>{SMILIES}</td>
+                <td class="success">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td class="active">
+                                <!-- BB Code START -->{__BBCodeButtons__}<!-- BB Code START -->
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td width="100%"><textarea class="form-control"  onblur="RestlicheZeichenErmitteln(this);" onchange="RestlicheZeichenErmitteln(this);" onfocus="RestlicheZeichenErmitteln(this);" onkeydown="RestlicheZeichenErmitteln(this);" onkeyup="RestlicheZeichenErmitteln(this);"  rows="15"  name="txt"></textarea><br />Noch <input size="3" name="Laenge" value="{TXTL}"> {_lang_signs}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>{ANTISPAM}
+            <tr class="active">
+                <td></td>
+                <td class="success">
+                    <button type="submit" tabindex="4" accesskey="s" name="sub" class="btn btn-success" >Eintrag absenden&nbsp;&nbsp;<i class="fa fa-sign-out"></i></button>
+            </tr>
+        </table>
+        <div class="panel-footer">
+            <div style="height:15px"></div>
+        </div>
+    </div>
+</form>
+
+{EXPLODE}
+<div class="panel panel-default">
+    <div class="panel-heading">
+	<div class="col-lg-6 col-md-6 col-xs-6 pull-left"><b>{name}</b></div>
+        <div class="col-lg-3 col-md-3 col-xs-3">{mail}{page}</div>
+        <div class="col-lg-3 col-md-3 col-xs-3 pull-right">geschrieben am:  {datum}</div>
+        <br style="clear:both;">
+    </div>
+	<div class="panel-body">
+		  <div class="col-lg-12 col-md-12 col-xs-12">{text}</div>
+	</div>
+</div>
+<br style="clear:both;">
+<table class="table table-bordered table-hover">
+    <tr class="success">
+        <td>
+            <form action="index.php?gbook-show-{id}" method="POST">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <b>{_lang_writecomment}</b>
+                    </div>
+                    <div class="panel-body">
+                        <input class="form-control" type="text" name="name" value="{uname}" />
+                        <br style="clear:both;">
+                        {ANTISPAM}
+                        <br style="clear:both;">
+                        <br style="clear:both;">
+                        <textarea class="form-control"  rows="3" name="text"></textarea><br />
+                    </div>
+                    <div class="panel-footer">   
+                        <button class="btn btn-success" name="sub" type="submit">Kommentar absenden&nbsp;&nbsp;<i class="fa fa-sign-out"></i></button>
+                    </div>
+                </div>
+            </form>
+            <br style="clear:both;">
+            {EXPLODE}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="active"># <b>{zahl}</b> von {name}</div>
+                </div>
+                <br style="clear:both;">
+                    <div class="panel-body">
+                        {text}
+                    </div>
+                    <br style="clear:both;">
+            </div>
+                {EXPLODE}
+            </td>
+    </tr>
+</table>

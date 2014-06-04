@@ -1,0 +1,75 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+  function finduser () {
+    var Fenster = window.open ('index.php?search-finduser-add', 'finduser', 'status=no,scrollbars=yes,height=400,width=350');
+    Fenster.focus();
+    
+    return (false);
+  }
+  
+  function changeview() {
+	var toggle = document.getElementById('toggle');
+	var check = document.getElementById('name').value;
+	var erg = check.search(/,/);
+	if (erg != -1) {
+		toggle.style.display='block';
+	} else {
+		toggle.style.display='none';
+	}
+  }
+//-->
+</script>
+
+<script type="text/javascript" src="include/includes/js/bbcode.js"></script>
+<form action="index.php?forum-privmsg-new" method="POST" name="form" class="form-horizontal">
+<br />
+<div class="panel panel-default">
+        <div class="col-lg-9">
+        	<br />
+        	<i class="btn-group">
+            <a href="index.php?forum-privmsg" class="btn btn-default">{_lang_inbox}&nbsp;<i class="fa fa-envelope-o"></i></a><a href="index.php?forum-privmsg-showsend" class="btn btn-default">{_lang_outbox}&nbsp;<i class="fa fa-envelope"></i></a>
+            </i>
+        </div>
+        <div class="col-lg-3">
+        	<br />
+            <a href="index.php?forum-privmsg-new" class="btn btn-default pull-right">{_lang_writemessage}&nbsp;<i class="fa fa-pencil-square-o"></i></a>
+        </div>
+<br /><br />
+ 
+<table width="100%" border="0" cellspacing="1" cellpadding="5" class="table table-bordered">
+  <tr class="success">
+	  <th colspan="2" height="20">{_lang_writenewmessage}</th>
+	</tr><tr>
+	  <td class="active">{_lang_receiver}</td>
+		<td class="success">
+        	<div class="input-group">
+            <span class="input-group-btn">
+			<a href="index.php?search-finduser" target="_blank" onClick="return finduser();" class="btn btn-success"><i class="fa fa-users"></i>&nbsp;&nbsp; User finden</a></span>
+			<input class="form-control" name="name" id="name" value="{name}" style="cursor:help;" title="Mehrere Empf&auml;nger mit , trennen" onKeyUp="changeview()" />
+            </div>
+		</td>
+	</tr><tr>
+	  <td class="active">{_lang_reference}</td>
+		<td class="success"><input class="form-control" type="text" tabindex="2" name="bet" value="{BET}"></td>
+	</tr><tr>
+	  <td colspan="2" height="20" class="active">
+		  <b>{_lang_writeyourmessage}</b></td>
+		</td>
+	</tr><tr>
+	  <td class="active" rowspan="2" valign="top">{SMILIES}</td>
+	  <td class="success" valign="top">
+     <!-- BB Code START -->
+	    {__BBCodeButtons__}
+		 <!-- BB Code ENDE -->
+		</td>
+	</tr><tr>
+    <td width="80%" class="success"> 
+      <textarea class="form-control" name="txt" rows="15" >{TXT}</textarea>
+    </td>
+  </tr><tr>
+    <td class="active"></td>
+    <td class="success"><button type="submit" tabindex="4" accesskey="s" name="sub" class="btn btn-success" >senden&nbsp;&nbsp;<i class="fa fa-sign-out"></i></button></td>
+	</tr>
+</table>
+</div>
+</form>

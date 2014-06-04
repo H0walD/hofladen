@@ -1,0 +1,85 @@
+{EXPLODE}
+<table class="table table-striped table-hover">
+	<thead>
+    	<tr>
+        	<th><b>{_lang_category}</b></th>
+            <th><b>Vorschau</b></th>
+    		<th style="text-align:center"><b>{_lang_pictures}</b></th>
+		</tr>
+    </thead>
+    <tbody>
+	{EXPLODE}
+	<tr>
+	  	<td><a href="index.php?gallery-{id}">{name}</a><br />&raquo;&nbsp;{besch}</td>
+        <td><img class="thumbnail" src="include/images/gallery/vorsch/{name}.png" width="100" border="0"></td>
+		<td align="center">{gallery}</td>
+	</tr>
+	{EXPLODE}
+    </tbody>
+</table>
+<br />
+<a href="javascript:history.back(1)" class="btn btn-default"><i class="fa fa-reply-all"></i><b>&nbsp;zur&uuml;ck</b></a>
+<br /><br />
+{EXPLODE}
+	<div class="row">
+  {EXPLODE}
+
+			<!--<strong>{_lang_filename}:</strong> {datei_name}
+			<!--<br /><strong>{_lang_seen}:</strong> {klicks}-->
+			<!--<br /><strong>{_lang_voting}:</strong> {vote_wertung}-->
+			<!--<br /><strong>{_lang_comments}:</strong> {anz_koms}
+			<div class="galltitel" align="center"><b>{besch}</b></div>
+			<br /><br />
+			<div class="img-thumbnail img-center">
+				<a rel="group" class="fancybox2_gallery" href="include/images/gallery/img_{id}.{endung}">
+				<img src="include/images/gallery/img_thumb_{id}.{endung}" table="0" alt="{datei_name}" data-toggle="tooltip" data-placement="bottom" title="{besch}"/>
+				</a> background:#ffffff url("img_tree.png") no-repeat right top;
+			</div>-->
+			
+			<div class="col-xs-6 col-md-3">
+				<a class="thumbnail fancybox2_gallery" href="include/images/gallery/img_{id}.{endung}" rel="group">
+				  <img src="include/images/gallery/img_thumb_{id}.{endung}" alt="{datei_name}" data-toggle="tooltip" data-placement="bottom" title="{besch}">
+				  <div style="width: 100%; height: 100% background:#000 url(include/images/gallery/img_thumb_{id}.{endung}) no-repeat center center">
+					&nbsp;
+				  </div>
+				</a>
+			</div>
+   {EXPLODE}
+	</div>
+<center>{MPL}</center>
+<script language="JavaScript" type="text/javascript">
+<!--
+  function oeffneFenster (bildr, cat) {
+    var fenster = window.open ('index.php?gallery-show-'+cat+'-p'+bildr,'showBild','scrollbars=yes,height=600,width={breite},left=200,status=yes,resizable=yes');
+    fenster.focus();
+    return (false);
+  }
+
+  // manage div ...
+  document.onmousemove = checkPosition;
+  function checkPosition(e) {
+    if(document.all) {
+      mausX = event.clientX + document.body.scrollLeft;
+      mausY = event.clientY + document.body.scrollTop;
+    } else {
+      mausX = e.pageX;
+      mausY = e.pageY;
+    }
+
+  }
+
+  function alertpos(dname) {
+  if (document.layers) {
+    document.layers[0].left = mausX;
+    document.layers[0].top = mausY;
+  } else if (document.getElementById) {
+    document.getElementById(dname).style.left = mausX + "px";
+    document.getElementById(dname).style.top = mausY + "px";
+  }
+  document.getElementById(dname).style.display = "inline";
+  }
+  function hiddpos(dname) {
+    document.getElementById(dname).style.display = "none";
+  }
+//-->
+</script>

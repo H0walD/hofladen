@@ -1,0 +1,39 @@
+<div class="btn-group pull-left">
+    <a href="index.php?forum-privmsg" class="btn btn-default" >{_lang_inbox}&nbsp;<i class="fa fa-envelope-o"></i></a>
+    <a href="index.php?forum-privmsg-showsend" class="btn btn-default" >{_lang_outbox}&nbsp;<i class="fa fa-envelope"></i></a>
+    <a href="index.php?forum-privmsg-archiv" class="btn btn-default">Archiv&nbsp;<i class="fa fa-folder-open"></i></a>
+</div>
+<div class="pull-right">
+<a href="index.php?forum-privmsg-new" class="btn btn-default">{_lang_writemessage}&nbsp;<i class="fa fa-pencil-square-o"></i></a>
+</div>
+<br style="clear:both;">
+<br style="clear:both;">
+
+<form action="index.php?forum-privmsg-edit" method="POST">
+    <div class="panel panel-default">
+	<div class="panel-heading">
+            <input type="hidden" name="read" value="{read}" />
+            <b>Nachrichtentitel:&nbsp;{titel}</b>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+        	<tr>
+                    <td>{_lang_sentto} <b>{name}</b> {_lang_on} {time}</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{txt}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="panel-footer">
+            <div class="pull-left btn-group">
+                <button type="button"  onclick="document.location.href ='?forum-privmsg-delete-{id}-s'" class="btn btn-default">l&ouml;schen&nbsp;<i class="fa fa-trash-o"></i></button>
+                {_if_{read}<='0'}<button type="button" onclick="document.location.href ='?forum-privmsg-edit-{id}'" class="btn btn-default">bearbeiten&nbsp;<i class="fa fa-pencil-square-o"></i>{/_endif}</button>
+		{_if_{archiv}>='1'}<button type="button"  onclick="document.location.href ='?forum-privmsg-toArchiv-{id}-s'" class="btn btn-default">ins Archiv&nbsp;<i class="fa fa-folder-open"></i>{/_endif}</button>
+            </div>
+            <br style="clear:both;">
+        </div>
+    </div>
+</form>

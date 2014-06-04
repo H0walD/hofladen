@@ -1,0 +1,96 @@
+<script language="javascript" type="text/javascript">
+<!--
+
+function set_user_name ()
+{
+	var cb = document.getElementsByName('names[]');
+	opener.document.form.name.value = '';
+	for (var i = 0;i<cb.length;i++) {
+		if (cb[i].checked) {
+			if (opener.document.form.name.value != '') {
+				opener.document.form.name.value += ', ' + cb[i].value;
+			} else {
+				opener.document.form.name.value = cb[i].value;
+			}
+		}
+	}
+	
+	opener.focus();
+	window.close();
+	opener.changeview();
+}
+
+function CheckAll ()
+{
+	if(document.form.ALL){
+		var c = document.form.ALL.checked;
+	}
+	for (var i=0;i<document.form.elements.length;i++){
+		var e = document.form.elements[i];
+		if(e.name != 'ALL') {
+			if((e.checked!=c)&&(e.type=="checkbox")){
+			 e.click();
+			 e.checked = c;
+			}
+		}
+	}
+}
+
+function get_empf()
+{
+	var empf = opener.document.form.name.value;
+	var erg  = empf.search(/,/);
+	var cb = document.getElementsByName('names[]');
+	if (erg != -1) {
+		var n = empf.split(", ");
+	} else {
+		var n = empf.split();
+	}
+	for (var i=0;i<n.length;i++){
+		for (var j=0;j<cb.length;j++){
+			if (cb[j].value === n[i]) {
+				cb[j].checked = true;
+				break;
+			}
+		}
+	}
+	for (k=0;k<cb.length;k++){
+		if (cb[k].checked) {
+			document.getElementById('all').checked=true;
+		} else {
+			document.getElementById('all').checked=false;
+			break;
+		}
+	}
+}
+
+//-->
+</script>
+<form action="index.php?search-finduser{add}" method="POST" name="form">
+<body onload="get_empf();">
+	<table cellpadding="3" cellspacing="1" border="0" class="border">
+		<tr class="Chead">
+			<td colspan="3"><b>{_lang_setreceiver}</b></td>
+		</tr>
+		<tr class="Cmite">
+			<td class="smalfont">{_lang_choosetherereceiver}</td>
+		</tr>
+		<tr class="Chead">
+			<th>{_lang_receiver}</th>
+			<th width="15" style="text-align: right;"><input name="ALL" id="all" type="checkbox" value="CHECK ALL" onClick="CheckAll();" /></th>
+		</tr>
+{EXPLODE}
+		<tr class="{class}">
+			<td>{empf}</td>
+			<td style="text-align: right;"><input type="checkbox" name="names[]" value="{empf}"></td>
+		</tr>
+{EXPLODE}
+		<tr>
+			<td class="Cnorm">
+				<br/><input type="button" value="Set" style="float: right;" onClick="set_user_name()">
+			</td>
+		</tr>
+{EXPLODE}
+	</table>
+</body>
+</form>

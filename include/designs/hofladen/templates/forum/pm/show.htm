@@ -1,0 +1,70 @@
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	$('input#check_all').click(function(e){
+		if( !$(this).is(':checked') ) {
+			$('input[type=checkbox]:not(#check_all)').prop('checked', false);
+		} else {
+			$('input[type=checkbox]:not(#check_all)').prop('checked', true);
+		}
+	});
+});
+//-->
+</script>
+<div class="btn-group pull-left">
+    <a href="index.php?forum-privmsg-showsend" class="btn btn-default" >{_lang_outbox}&nbsp;<i class="fa fa-envelope"></i></a>
+    <a href="index.php?forum-privmsg-archiv" class="btn btn-default">Archiv&nbsp;<i class="fa fa-folder-open"></i></a>
+</div>
+<div class="pull-right">
+    <a href="index.php?forum-privmsg-new" class="btn btn-default pull-right" >{_lang_writemessage}&nbsp;<i class="fa fa-pencil-square-o"></i></a>
+</div>
+<br style="clear:both;">
+<br style="clear:both;">
+<form action="index.php?forum-privmsg-delete" method="POST" name="form">
+    <div class="panel panel-default">
+	<div class="panel-heading">
+            <div class="pull-right">
+	  	<div class="btn-group ">
+                    <button type="submit"  name="toArchiv" class="btn btn-default">ins Archiv &nbsp;<i class="fa fa-folder-open-o"></i></button>
+                    <button type="submit" class="btn btn-default"> l&ouml;schen &nbsp;<i class="fa fa-trash-o"></i></button>
+                    <button type="button" class="btn btn-default " style=" height:34px"><i class="fa fa-level-down"></i></button>
+          	</div>
+            </div>
+            <br style="clear:both;">
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th><b>{_lang_messagetitle}</b></th>
+                    <th><b>{_lang_sender}</b></th>
+                    <th><b>Zeit</b></th>
+                    <th class="text-center">
+                        <input id="check_all" type="checkbox" value="all">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            {EXPLODE}
+            <tr>
+                <td><a href="index.php?forum-privmsg-showmsg-{ID}">{BET}</a></td>
+                <td>von {ABS} {NEW}</td>
+                <td>{time}</td>
+                <td class="text-center"><input type="checkbox" name="delids[]" value="{ID}"></td>
+            </tr>
+            {EXPLODE}
+            </tbody>
+        </table>
+        <div class="panel-footer">
+            <div class="pull-right">
+                <div class="btn-group">
+                    <button type="submit"  name="toArchiv" class="btn btn-default">ins Archiv &nbsp;<i class="fa fa-folder-open-o"></i></button>
+                    <button type="submit" class="btn btn-default"> l&ouml;schen &nbsp;<i class="fa fa-trash-o"></i></button>
+                    <button type="button" class="btn btn-default "  style="height:34px"><i class="fa fa-level-up"></i></button>
+                </div>
+            </div>
+            <br style="clear:both;">
+        </div>
+    </div>
+</form>
+<br style="clear:both;">
+<div align="center">{MPL}</div>

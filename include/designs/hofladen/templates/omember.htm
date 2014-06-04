@@ -1,0 +1,26 @@
+<table width="100%" border="0" cellpadding="3" cellspacing="1" class="border">
+{EXPLODE}
+<tr>
+	<!-- hier das gruppenbild! (bspw. group-9.jpg für alle admins)-->
+	<td colspan="7"><img src="include/images/rangs/group{group_id}.png" alt="{group_name}"/></td>
+</tr>
+  <tr class="Chead">
+  	<th align="center" width="5%">Land</th>
+    <th align="center" height="30" width="25%">{_lang_name}</th>
+		<th align="center" width="15%">{_lang_group}</th>
+		<th align="center" width="5%">{_lang_contact}</th>
+		<th align="center" width="30%">{_lang_lasttimeonline}</th>
+		<th width="20%" align="center">{_lang_regtime}</th>
+  </tr>{EXPLODE}<tr class="{CLASS}">
+ 	<th align="center" width="5%"><img src="include/images/flags/{STAAT}" alt="" border="0"></th>
+    <td align="center" width="30%"><a href="index.php?user-details-{UID}">{NAME}</a></td>
+		<td align="center" width="15%">{GRUPE}</td>
+		<td align="center" width="20%"><a href="mailto:{EMAIL}"><img src="include/images/icons/email_small.png" border="0"></a>
+		{ICQ}</td>
+		<td align="center" width="30%">{LLOGIN}</td>
+		<td align="center" width="5%">{DATE}</td>
+  </tr>{EXPLODE}
+</table>
+<div align="center">{SITELINK}
+<form method="get" action=""><input type="hidden" name="omember" value="" /><input type="text" name="filtername" size="15" value="{filtername}" /> <input type="submit" value="{_lang_filter}" /></form>
+</div>

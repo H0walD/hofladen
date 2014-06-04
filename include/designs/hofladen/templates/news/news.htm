@@ -1,0 +1,71 @@
+<div class="col-sm-6 col-md-4 col-lg-4">
+    <div class="thumbnail">
+      <img src="{kate}" class="img-responsive">
+      <div class="caption">
+        <h4 class="text-center">{title}</h4>
+		<p class="text-center small">{datum}</p>
+		<hr>
+        <p style="max-height: 200px min-height: 200px: overflow: hidden;">{text}</p>
+        <p>
+			<div class="btn-group pull-right">
+				<a href="index.php?user-details-{uid}" title="Benutzerinfo: {username}" class="btn btn-default"><i class="fa fa-user"></i> </a>
+				<a href="index.php?news-{id}" alt="Kommentare ({kom})" title="Kommentare ({kom})" class="btn {_if_{kom}=='0'}btn-default{_else_}btn-success{/_endif}"><i class="fa fa-comment"></i></a>
+				<a href="index.php?news-send-{id}" alt="Diese News einen Freund senden" title="Diese News einen Freund senden" class="btn btn-default"><i class="fa fa-envelope"></i> </a>
+				<a href="index.php?news-print-{id}" alt="Druckoptimierte Version" title="Druckoptimierte Version" class="btn btn-default"><i class="fa fa-print"></i> </a>
+				<br>
+			</div>
+		</p>
+      </div>
+    </div>
+ </div>
+
+	<!--{klicks}{readwholenews}-->
+{EXPLODE}
+<br />
+<br /><center>{SITELINK}</center>
+
+
+{EXPLODE}
+<script language="JavaScript" type="text/javascript">
+function delkom (NID, ID) {
+var Check = confirm("Kommentar wirklich löschen?")
+if (Check == true) window.open("index.php?news-"+NID+"-d"+ID,"_self");
+}</script>
+<!-- News Kommentare und Mehr lesen -->
+<div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="thumbnail">
+        <div class="caption">
+            <h1 class="text-center">{NAME}</h1>
+            <br style="clear:both">
+            <hr>
+            <div>
+                <img src="{KATE}" height="10" class="img-responsive">
+                <p>{TEXT}</p>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-success" href="javascript:history.back(1)"><b><i class="fa fa-mail-reply-all"></i>&nbsp;zur&uuml;ck</b></a>
+    <br style="clear:both">
+  {_lang_commentsfor} {NAME}
+
+	    {EXPLODE}
+	    <form action="index.php?news-{NID}" method="POST">
+        <fieldset>
+          <legend>{_lang_writecomment}</legend>
+          <input type="text" name="name" value="{uname}" /> &nbsp; {ANTISPAM} &nbsp; <input type="submit" value="{_lang_enter}"><br />
+          <textarea style="width: 98%" cols="50" rows="2" name="txt"></textarea><br />
+        </fieldset>
+      </form>
+      <br />
+      {EXPLODE}
+
+      <span class="Cmite"># <b>{ZAHL}</b> von {NAME}</span>
+      <br />{TEXT}<br /><br />
+
+      {EXPLODE}
+      <br />
+      <a href="javascript:history.back(1)"><b>&laquo;</b> {_lang_back}</a>
+
+    </td>
+  </tr>
+</div>
