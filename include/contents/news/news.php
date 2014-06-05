@@ -373,7 +373,7 @@ if (!is_numeric($menu->get(1))) {
         while ($row1 = db_fetch_assoc($erg1)) {
             $row1['text'] = bbcode(trim($row1['text']));
             if (has_right(- 7, 'news')) {
-                $row1['text'] .= '<a href="javascript:delkom(' . $nid . ',' . $row1['id'] . ')"><img src="include/images/icons/del.gif" alt="l&ouml;schen" border="0" title="l&ouml;schen" /></a>';
+                $row1['text'] .= '<a href="javascript:delkom(' . $nid . ',' . $row1['id'] . ')"><p class="btn btn-default pull-right" title="l&ouml;schen" alt="l&ouml;schen"> löschen &nbsp;<i class="fa fa-trash-o"></i></p></a>';
             }
             $tpl->set_ar_out(array('NAME' => $row1['name'], 'TEXT' => $row1['text'], 'ZAHL' => $zahl) , 4);
             $zahl--;
