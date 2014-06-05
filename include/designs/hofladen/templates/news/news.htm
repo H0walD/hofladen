@@ -39,33 +39,35 @@ if (Check == true) window.open("index.php?news-"+NID+"-d"+ID,"_self");
             <br style="clear:both">
             <hr>
             <div>
-                <img src="{KATE}" height="10" class="img-responsive">
-                <p>{TEXT}</p>
+                <img src="{KATE}" class="img-responsive col-lg-3 col-md-3 col-sm-3">
+                <p class="col-lg-9 col-md-9 col-sm-9">{TEXT}</p>
+                <br style="clear:both">
             </div>
         </div>
     </div>
     <a class="btn btn-success" href="javascript:history.back(1)"><b><i class="fa fa-mail-reply-all"></i>&nbsp;zur&uuml;ck</b></a>
     <br style="clear:both">
-  {_lang_commentsfor} {NAME}
 
 	    {EXPLODE}
+            <br style="clear:both">
 	    <form action="index.php?news-{NID}" method="POST">
-        <fieldset>
-          <legend>{_lang_writecomment}</legend>
-          <input type="text" name="name" value="{uname}" /> &nbsp; {ANTISPAM} &nbsp; <input type="submit" value="{_lang_enter}"><br />
-          <textarea style="width: 98%" cols="50" rows="2" name="txt"></textarea><br />
-        </fieldset>
-      </form>
-      <br />
+                <div class="thumbnail">
+                    <h4>{_lang_writecomment}</h4>
+                    <input class="form-control" type="text" name="name" value="{uname}" width="250" />
+                    <br style="clear:both">
+                    <div class="pull-left">{ANTISPAM}</div>
+                        <textarea class="form-control"  rows="3" name="txt"></textarea><br style="clear:both">
+                        <button type="submit" name="sub" class="btn btn-success" >senden&nbsp;&nbsp;<i class="fa fa-sign-out"></i></button><br />
+                </div>
+            </form>
+      <br style="clear:both">
       {EXPLODE}
 
-      <span class="Cmite"># <b>{ZAHL}</b> von {NAME}</span>
-      <br />{TEXT}<br /><br />
+      <div class="thumbnail"><i class="fa fa-comments-o"></i>&nbsp;<b>{ZAHL}</b> von {NAME}
+      <br style="clear:both">
+      <p class="well well-sm">{TEXT}</p></div>
+      <br style="clear:both">
 
       {EXPLODE}
-      <br />
-      <a href="javascript:history.back(1)"><b>&laquo;</b> {_lang_back}</a>
-
-    </td>
-  </tr>
+      <a href="javascript:history.back(1)" class="btn btn-default"><i class="fa fa-reply-all"></i><b>&nbsp;zurück</b></a>
 </div>

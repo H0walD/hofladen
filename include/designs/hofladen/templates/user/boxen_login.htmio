@@ -1,7 +1,0 @@
-<form class="navbar-form" method="post">
-	<input name="name" type="text" class="form-control" placeholder="Benutzername">
-	<input name="pass" type="password" class="form-control" placeholder="Password">
-	<input type="hidden" name="wdlink" value="{wdlink}" />
-	<input name="user_login_sub" type="submit" class="btn btn-success" value="Login">
-	<a href="{regist}" class="btn btn-info">Registrieren</a>
-</form>
