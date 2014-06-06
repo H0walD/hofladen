@@ -1,4 +1,4 @@
-<?php defined ('main') or die ('no direct access'); ?><!--@title=wochenmarkt@--><!--@hmenu=wochenmarkt@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
+<?php defined ('main') or die ('no direct access'); ?><!--@title=wochenmarkt@--><!--@hmenu=Wochenmarkt in Liechtenstein@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
 <h1>Wochenmarkt</h1>
 <hr><br />
 <div class="col-lg-8">

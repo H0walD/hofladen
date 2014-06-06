@@ -34,7 +34,7 @@ background-repeat: repeat-x;
 }
 
 </style>
-<?php defined ('main') or die ('no direct access'); ?><!--@title=home@--><!--@hmenu=home@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
+<?php defined ('main') or die ('no direct access'); ?><!--@title=home@--><!--@hmenu=Startseite@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
 <h1>Herzlich willkommen bei Nigg`s Hofladen</h1>
 <br clear="both">
 <div class=" panel panel-default">

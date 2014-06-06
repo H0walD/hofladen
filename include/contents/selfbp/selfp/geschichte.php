@@ -1,4 +1,4 @@
-<?php defined ('main') or die ('no direct access'); ?><!--@title=geschichte@--><!--@hmenu=geschichte@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
+<?php defined ('main') or die ('no direct access'); ?><!--@title=geschichte@--><!--@hmenu=Geschichte@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
 <div class="col-lg-12">
     <div class="page-header text-center">
         <h1 id="timeline">Geschichte vom Hof</h1>

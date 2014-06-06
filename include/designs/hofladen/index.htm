@@ -62,7 +62,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-left">
-                                    <li><a href="?"><i class="fa fa-home "></i> Home</a></li>
+                                    <li><a href="?home"><i class="fa fa-home "></i> Home</a></li>
                                         {_list_menunr1@
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i> %1 <b class="caret"></b></a>
@@ -80,7 +80,6 @@
 		  </div><!-- /.container-fluid -->
 	  </div>
       </div>
-      <div class="nav navbar-nav navbar-right">{_boxes_login}</div>
       <div class="col-lg-2"></div>
 	</nav>
 	
@@ -88,7 +87,17 @@
 	<div class="col-lg-2"></div>
 	<div class="col-lg-8">
 		<div class="panel panel-default">
-			<div class="panel-body">{_boxes_newsticker}</div>
+			<div class="panel-body">
+                            <div class="hmenu">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-success" type="button" style="height:34px;">Sie befinden sich:</button>
+                                    </span>
+                                    <div class="pull-left"><i class="fa fa-angle-double-right"></i>&nbsp;{HMENU}</div>
+                                    <div class="pull-right">{_boxes_login}</div>
+                                </div>
+                            </div>
+                        </div>
 		</div>
 	</div>
 	<div class="col-lg-2"></div>
@@ -125,12 +134,10 @@
 <footer>
 <div id="footer-floor">
     <div class="col-lg-12">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-6">{_boxes_loginform}</div>
-        <div class="col-lg-2">
+        <div class="col-lg-4 col-md-offset-2">{_boxes_loginform}</div>
+        <div class="col-lg-2 col-md-offset-2">
         	<div class="loginformcontainer" style="margin-top:14px; text-align:center"><div class="float-left"><b>&copy; Copyright 2014 by<a href="http://www.hofladen.li">&nbsp;&nbsp;&nbsp;www.hofladen.li</a></b></div>
         </div>
-        <div class="col-lg-2"></div>
     </div>
 </div>
 </footer>

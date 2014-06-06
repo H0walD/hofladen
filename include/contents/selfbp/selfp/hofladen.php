@@ -1,4 +1,4 @@
-<?php defined ('main') or die ('no direct access'); ?><!--@title=hofladen@--><!--@hmenu=hofladen@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
+<?php defined ('main') or die ('no direct access'); ?><!--@title=hofladen@--><!--@hmenu=Hofladen-Balzers@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
 <h1>Hofladen</h1>
 <hr><br />
 <div class="col-lg-8">

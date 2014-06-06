@@ -1,4 +1,4 @@
-<?php defined ('main') or die ('no direct access'); ?><!--@title=gmueslada@--><!--@hmenu=gmueslada@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
+<?php defined ('main') or die ('no direct access'); ?><!--@title=gmueslada@--><!--@hmenu=Gmueslada-Vaduz@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
 <h1>Dr Gm&uuml;eslada</h1>
 <hr><br />
 <div class="col-lg-8">
