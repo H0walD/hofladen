@@ -1,3 +1,4 @@
+<?php defined ('main') or die ('no direct access'); ?><!--@title=home@--><!--@hmenu=Startseite@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
 <style type="text/css">
 .carousel-caption {
 padding-top: 160px;
@@ -34,7 +35,6 @@ background-repeat: repeat-x;
 }
 
 </style>
-<?php defined ('main') or die ('no direct access'); ?><!--@title=home@--><!--@hmenu=Startseite@--><!--@view=normal@--><!--@viewoptions=@--><!--@wysiwyg=1@-->
 <h1>Herzlich willkommen bei Nigg`s Hofladen</h1>
 <br clear="both">
 <div class=" panel panel-default">
@@ -53,7 +53,7 @@ background-repeat: repeat-x;
             			<img src="include/hpbilder/slider/bild1.jpg" border="0" min-hight="300px">
             				<div class="carousel-caption">
               				<h3>Unsere Bilder- Galerie</h3>
-              				<p><a class="slidlink" href="?gallery">Hier</a> könnt ihr ein noch mehr Bilder von uns ...</p>
+              				<p><a class="slidlink" href="?gallery">Hier</a> k&ouml;nnt ihr ein noch mehr Bilder von uns ...</p>
             				</div>
         			</div>
         		<div class="item">
@@ -67,7 +67,7 @@ background-repeat: repeat-x;
             		<img src="include/hpbilder/slider/bild3.jpg" border="0" min-hight="300px">
             			<div class="carousel-caption">
              			<h3>Erdbeeren ??</h3>
-              			<p>Lust auf frische Erdbeeren, ab sorfort in Unseren Läden verfügbar.</p>
+              			<p>Lust auf frische Erdbeeren, ab sorfort in Unseren L&auml;den verf&uuml;gbar.</p>
             			</div>
        			</div>
                     </div>
@@ -84,18 +84,18 @@ background-repeat: repeat-x;
         <h1>Unser Betrieb</h1>
 	<hr><br class="clear">
             <div class="col-lg-8">
-			<p><b>Unser Betrieb liegt an schöner Lage in der Nähe der Rheins in Balzers.</b></p>
+			<p><b>Unser Betrieb liegt an sch&ouml;ner Lage in der N&auml;he der Rheins in Balzers.</b></p>
 			<hr>
-                        <p><b>Wir betreiben seit 30 Jahren Gemüsebau und Eierverkauf. Unsere Hühner halten wir in tiergerechter Freilandhaltung.</b></p>
+                        <p><b>Wir betreiben seit 30 Jahren Gem&uuml;sebau und Eierverkauf. Unsere H&uuml;hner halten wir in tiergerechter Freilandhaltung.</b></p>
                         <p><b>Wir bewirtschaften den Hof nach den Richtlinien Swiss Garantie (Produktion IP Suisse).</b>
                             <img class="thumbnail pull-right" src="include/hpbilder/suisse.png" title="Swiss Garantie" alt="Swiss Garantie" border="0" width="50px">
                             <br class="clear">
                         </p>
                         <hr>
-                        <p><b>Bei uns dreht sich fast alles um unsere Hühner und Gemüse, die wir das ganze Jahr mit Freude hegen und pflegen</b></p>
-                        <p><b>Je nach Saison verkaufen wir frisches Gemüse direkt vom Feld, zum Beispiel Spageln, Salate, Tomaten, Kartoffeln usw.</b></p>
+                        <p><b>Bei uns dreht sich fast alles um unsere H&uuml;hner und Gem&uuml;se, die wir das ganze Jahr mit Freude hegen und pflegen</b></p>
+                        <p><b>Je nach Saison verkaufen wir frisches Gem&uuml;se direkt vom Feld, zum Beispiel Spageln, Salate, Tomaten, Kartoffeln usw.</b></p>
                         <hr>
-                        <p><b>In unserem Hofladen Balzers und Gmüeslada Vaduz finden Sie nebst Gemüse und Eier allerlei hausgemachte Spezialitäten.</b></p>
+                        <p><b>In unserem Hofladen Balzers und Gm&uuml;eslada Vaduz finden Sie nebst Gem&uuml;se und Eier allerlei hausgemachte Spezialit&auml;ten.</b></p>
                         <hr>
                         <p><b>Jeweils von April bis November finden Sie Uns am Wochenmarkt in Balzers oder auf dem Bauernmarkt in Vaduz.</br> Weitere Infos dazu finden sie auch <a href="?wochenmarkt">hier.</a></b></p>
                         <hr>
@@ -111,11 +111,11 @@ background-repeat: repeat-x;
 		<li class="list-group-item">
 		Eier, roh oder gekocht<br> 
                 <hr>
-		Salate, Gemüse<br>
+		Salate, Gem&uuml;se<br>
                 <hr>
-		Spargeln, grün oder weiss<br>
+		Spargeln, gr&uuml;n oder weiss<br>
                 <hr>
-                Kartoffeln, Kürbis<br>
+                Kartoffeln, K&uuml;rbis<br>
                 <hr>
                 Erdbeeren, Himbeeren<br>
                 <hr>
@@ -127,11 +127,11 @@ background-repeat: repeat-x;
                 <hr>
                 Quitten, Honig<br>
                 <hr>
-                Geschenkkörbe<br>
+                Geschenkk&ouml;rbe<br>
                 <hr>
                 Eierkirsch, Balzner Kirsch<br>
                 <hr>
-                Alpkäse, Alpjoghurt<br>
+                Alpk&auml;se, Alpjoghurt<br>
                 <hr>
                 und vieles mehr.
 		</li>
