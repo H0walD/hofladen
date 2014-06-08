@@ -4,6 +4,7 @@
 
 ## Cache nicht mit hochladen
 include/angelo.b3k/cache/*
+include/includes/config.php
 
 
 #################
